@@ -1,0 +1,50 @@
+package extra;
+import java.util.*;
+public abstract class Extra12 {
+	
+	public static int func(int a, int b, int c, int n, int i)
+	{
+		 if(n-2!=i)
+		 {
+			 c=a+b;
+			 System.out.print(c+" ");
+			 func(b,c,c,n, i+1);
+		 }
+		 else
+			 return c;
+				 
+		return 0;
+	}
+	
+
+	public static void main(String[] args) {
+		
+		
+		int a=0;
+		int b=1;
+		int c=0;
+		System.out.println("Enter:");
+		Scanner sc= new Scanner(System.in);
+		int n=sc.nextInt();
+		int i=0;
+		System.out.println("Using Recursive Function:");
+		System.out.print(a+" "+b+" ");
+		
+		
+		func(a,b,c,n,i);
+		
+		System.out.println("\nWithout Using Recursive Function:");
+		System.out.print(a+" "+b+" ");
+		for(int j=0;j<=n-3;j++)
+		{
+			c=a+b;
+			System.out.print(c+" ");
+			a=b;
+			b=c;
+		}
+		
+		
+
+	}
+
+}
